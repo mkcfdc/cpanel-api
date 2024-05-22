@@ -6,7 +6,7 @@ import envToLogger from './config/logging.config.js';
 import registerConfig from './config/registerConfigs.js';
 import registerRoutes from './routes/registerRoutes.js';
 
-const environment = config.ENVIRO || 'development';
+const environment = config.server.ENVIRO;
 
 const app = fastify({
   logger: envToLogger[environment] ?? true
